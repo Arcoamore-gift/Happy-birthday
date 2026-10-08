@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Caveat:wght@500;700&family=Nunito:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-decor" id="bg-decor" aria-hidden="true"></div>
+    <div id="confetti" aria-hidden="true"></div>
+    <audio id="bg-music" loop preload="auto" src="happybirthday.mp3"></audio>
+    <button id="music-toggle" class="music-toggle" type="button" aria-label="Toggle background music" title="Toggle background music">
+      <span class="speaker-icon" aria-hidden="true">🔊</span>
+    </button>
+
+    <!-- 1. Amplop -->
+    <section id="page1" class="active">
+        <div id="letter-container">
+            <p id="letter-hint">Click the envelope to open it</p>
+            <div id="envelope" role="button" tabindex="0" aria-label="Buka surat">
+                <div class="env-back"></div>
+                <div class="env-letter-peek"></div>
+                <div class="env-flap-left"></div>
+                <div class="env-flap-right"></div>
+                <div class="env-flap-bottom"></div>
+                <div class="env-flap-top">
+                    <div class="wax-seal">
+                        <svg viewBox="0 0 100 100" class="wax-leaf">
+                          <path d="M50 18 C 33 30, 28 52, 50 82 C 72 52, 67 30, 50 18 Z" fill="none" stroke="currentColor" stroke-width="3"/>
+                          <line x1="50" y1="24" x2="50" y2="74" stroke="currentColor" stroke-width="2"/>
+                          <path d="M50 32 Q 40 36, 38 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                          <path d="M50 32 Q 60 36, 62 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                          <path d="M50 44 Q 40 48, 38 56" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                          <path d="M50 44 Q 60 48, 62 56" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                          <path d="M50 56 Q 42 60, 41 66" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                          <path d="M50 56 Q 58 60, 59 66" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Kertas ucapan (isi teks diatur di main.js) -->
+    <section id="page2">
+        <div class="paper" id="paper"></div>
+    </section>
+
+    <!-- 3. Kue -->
+    <section id="page3">
+        <h2 id="cake-title">Blow the candle</h2>
+        <p id="cake-sub">Make a wish</p>
+        <div class="cake" id="cake">
+            <div class="candles">
+                <div class="candle"><div class="flame"></div><div class="smoke"></div></div>
+                <div class="candle"><div class="flame"></div><div class="smoke"></div></div>
+                <div class="candle"><div class="flame"></div><div class="smoke"></div></div>
+            </div>
+            <div class="tier tier-2"></div>
+            <div class="tier tier-1"></div>
+            <div class="plate"></div>
+        </div>
+        <button id="blow-btn" type="button">blow out the candle</button>
+    </section>
+
+    <!-- 4. Happy Birthday -->
+    <section id="page4">
+        <h1 id="hb-text" aria-label="Happy Birthday"></h1>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
